@@ -14,6 +14,7 @@ namespace BookStoreService.Interfaces
         [OperationContract]
         Account Authenticate(string username, string password);
 
+
         [OperationContract]
         List<Account> findAccountsByGroup(string groupID);
 

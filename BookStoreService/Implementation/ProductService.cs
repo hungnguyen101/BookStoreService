@@ -50,6 +50,7 @@ namespace BookStoreService.Implementation
                 p.DescriptionXML = entity.DescriptionXML;
                 p.Description = entity.Description;
                 p.ModifiedAt = DateTime.Now;
+                p.ModifiedBy = entity.ModifiedBy;
                 p.MoreImages = entity.MoreImages;
                 p.Name = entity.Name;
                 p.Price = entity.Price;
