@@ -8,3 +8,13 @@ E:\web\asp\BookStoreService\BookStoreService\bin\Debug\EntityFramework.SqlServer
 E:\web\asp\BookStoreService\BookStoreService\obj\Debug\BookStoreService.csprojResolveAssemblyReference.cache
 E:\web\asp\BookStoreService\BookStoreService\obj\Debug\BookStoreService.dll
 E:\web\asp\BookStoreService\BookStoreService\obj\Debug\BookStoreService.pdb
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\BookStoreService.dll.config
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\BookStoreService.dll
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\BookStoreService.pdb
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\EntityFramework.dll
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\EntityFramework.xml
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\obj\Debug\BookStoreService.dll
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\obj\Debug\BookStoreService.pdb
+C:\Users\ethanbladen\Desktop\BookStoreService\BookStoreService\obj\Debug\BookStoreService.csprojResolveAssemblyReference.cache

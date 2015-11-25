@@ -13,5 +13,7 @@ namespace BookStoreService.Interfaces
     {
         [OperationContract]
         List<Product> findProuctsByCategory(int id);
+        //[OperationContract]
+        //Product findById(long id);
     }
 }

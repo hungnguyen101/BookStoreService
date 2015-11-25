@@ -10,10 +10,12 @@ namespace BookStoreService.Implementation
 {
     public class ProductService : IProduct
     {
-        private BookStoreDbContext db = null;
-        public ProductService()
+
+        BookStoreDbContext db = new BookStoreDbContext();
+
+        public List<Product> findProuctsByCategory(int id)
         {
-            db = new BookStoreDbContext();
+            return db.Products.Where(a => a.Category == id).ToList();
         }
 
         public List<Product> findAll()
@@ -23,17 +25,16 @@ namespace BookStoreService.Implementation
 
         public Product findById(long id)
         {
-            return db.Products.Find(id);
+            return db.Products.SingleOrDefault(a => a.id == id);
         }
 
         public long insert(Product entity)
         {
             try
             {
-                Product p = (Product)entity;
-                db.Products.Add(p);
+                db.Products.Add(entity);
                 db.SaveChanges();
-                return p.id;
+                return entity.id;
             }
             catch
             {
@@ -45,50 +46,31 @@ namespace BookStoreService.Implementation
         {
             try
             {
-                Product p = db.Products.Find(entity.id);
+                Product p = db.Products.SingleOrDefault(a => a.id == entity.id);
                 p.Category = entity.Category;
-                p.DescriptionXML = entity.DescriptionXML;
                 p.Description = entity.Description;
-                p.ModifiedAt = DateTime.Now;
-                p.ModifiedBy = entity.ModifiedBy;
-                p.MoreImages = entity.MoreImages;
                 p.Name = entity.Name;
-                p.Price = entity.Price;
-                p.Promotion = entity.Promotion;
-                p.PromotionPrice = entity.PromotionPrice;
-                p.Quantity = entity.Quantity;
-                p.ShowOnHome = entity.ShowOnHome;
-                p.Status = entity.Status;
-                p.Thumbnail = entity.Thumbnail;
                 db.SaveChanges();
                 return true;
             }
             catch
             {
-
+                return false;
             }
-            return false;
         }
 
         public bool delete(long id)
         {
             try
             {
-                Product p = db.Products.Find(id);
-                db.Products.Remove(p);
+                db.Products.Remove(db.Products.SingleOrDefault(a => a.id == id));
                 db.SaveChanges();
                 return true;
             }
             catch
             {
-
+                return false;
             }
-            return false;
-        }
-
-        public List<Product> findProuctsByCategory(int id)
-        {
-            return db.Products.Where(p => p.Category == id).ToList();
         }
     }
 }

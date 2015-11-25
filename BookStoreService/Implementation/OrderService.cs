@@ -55,7 +55,11 @@ namespace BookStoreService.Implementation
             try
             {
                 entity.CreatedAt = DateTime.Now;
+                entity.Status = false;
                 db.Orders.Add(entity);
+                db.SaveChanges();
+                foreach (DetailOrder item in items)
+                    item.OrderId = entity.id;
                 db.DetailOrders.AddRange(items);
                 db.SaveChanges();
                 return true;

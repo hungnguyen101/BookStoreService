@@ -11,5 +11,7 @@ namespace BookStoreService.Interfaces
     [ServiceContract]
     public interface IPromotion : IModel<Promotion>
     {
+
+
     }
 }

@@ -53,7 +53,6 @@ namespace BookStoreService.Implementation
         {
             try
             {
-                entity.ModifiedAt = DateTime.Now;
                 Account acc = db.Accounts.Find(entity.id);
                 acc.Address = entity.Address;
                 acc.Avatar = entity.Avatar;
@@ -61,13 +60,14 @@ namespace BookStoreService.Implementation
                 acc.Facebook = entity.Facebook;
                 acc.Fullname = entity.Fullname;
                 acc.GroupId = entity.GroupId;
-                acc.ModifiedAt = entity.ModifiedAt;
+                acc.ModifiedBy = entity.ModifiedBy;
                 acc.Password = entity.Password;
                 acc.Phone = entity.Phone;
                 acc.Roles = entity.Roles;
                 acc.Skype = entity.Skype;
                 acc.Status = entity.Status;
                 acc.Yahoo = entity.Yahoo;
+                acc.ModifiedAt = DateTime.Now;
                 db.SaveChanges();
                 return true;
             }
@@ -96,6 +96,12 @@ namespace BookStoreService.Implementation
         public List<Account> findAccountsByGroup(string groupID)
         {
             return db.Accounts.Where(a => a.GroupId.Equals(groupID)).ToList();
+        }
+
+
+        public Account findAccountByUsername(string customer)
+        {
+            return db.Accounts.SingleOrDefault(a => a.Username.Equals(customer) || a.Email.Equals(customer));
         }
     }
 }

@@ -18,5 +18,8 @@ namespace BookStoreService.Interfaces
         [OperationContract]
         List<Account> findAccountsByGroup(string groupID);
 
+        [OperationContract]
+        Account findAccountByUsername(string username);
+
     }
 }
