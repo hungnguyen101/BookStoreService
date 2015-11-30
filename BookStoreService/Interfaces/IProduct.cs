@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookstoreService.EF;
 using System.ServiceModel;
-using BookStoreService.EF;
 
-namespace BookStoreService.Interfaces
+namespace BookstoreService.Interfaces
 {
     [ServiceContract]
-    public interface IProduct : IModel<Product>
+    public interface IProduct :IModel<Product>
     {
         [OperationContract]
-        List<Product> findProuctsByCategory(int id);
-        //[OperationContract]
-        //Product findById(long id);
+        List<Product> findProductsByCategory(long catId);
+        [OperationContract]
+        List<Product> findByKeyword(string key);
+        [OperationContract]
+        List<Product> findByPrice(decimal start, decimal end);
     }
 }

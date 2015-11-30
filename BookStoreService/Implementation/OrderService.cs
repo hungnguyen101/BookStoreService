@@ -70,6 +70,21 @@ namespace BookStoreService.Implementation
             }
         }
 
+        public bool update(Order entity)
+        {
+            try
+            {
+                Order o = db.Orders.Find(entity.id);
+                o.Status = entity.Status;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
         public List<DetailOrder> findDetailByOrder(long id)
         {

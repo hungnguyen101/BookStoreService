@@ -1,4 +1,4 @@
-namespace BookStoreService.EF
+namespace BookstoreService.EF
 {
     using System;
     using System.Collections.Generic;

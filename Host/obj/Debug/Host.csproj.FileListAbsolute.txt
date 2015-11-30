@@ -14,6 +14,8 @@ E:\web\asp\BookStoreService\Host\obj\Debug\Host.csproj.GenerateResource.Cache
 E:\web\asp\BookStoreService\Host\obj\Debug\Host.exe
 E:\web\asp\BookStoreService\Host\obj\Debug\Host.pdb
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\bin\Debug\Host.exe.config
+C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.exe
+C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.pdb
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\bin\Debug\Host.exe
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\bin\Debug\Host.pdb
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\bin\Debug\BookStoreService.dll
@@ -26,5 +28,3 @@ C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.csprojResolveA
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.Form1.resources
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.Properties.Resources.resources
 C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.csproj.GenerateResource.Cache
-C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.exe
-C:\Users\ethanbladen\Desktop\BookStoreService\Host\obj\Debug\Host.pdb

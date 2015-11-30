@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B132371-48AA-4003-A466-7D4B1D400790}</ProjectGuid>
+    <ProjectGuid>{B80D92BD-4C9F-4345-926A-9C37B497C742}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BookStoreService</RootNamespace>
-    <AssemblyName>BookStoreService</AssemblyName>
+    <RootNamespace>BookstoreService</RootNamespace>
+    <AssemblyName>BookstoreService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,32 +50,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF\Account.cs" />
-    <Compile Include="EF\BookStoreDbContext.cs" />
+    <Compile Include="EF\BookstoreDbContext.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\DetailOrder.cs" />
     <Compile Include="EF\Group.cs" />
     <Compile Include="EF\Order.cs" />
     <Compile Include="EF\Product.cs" />
     <Compile Include="EF\Promotion.cs" />
-    <Compile Include="Implementation\AccountService.cs" />
-    <Compile Include="Implementation\CategoryService.cs" />
-    <Compile Include="Implementation\GroupService.cs" />
-    <Compile Include="Implementation\OrderService.cs" />
-    <Compile Include="Implementation\ProductService.cs" />
-    <Compile Include="Implementation\PromotionService.cs" />
+    <Compile Include="Implementations\AccountService.cs" />
+    <Compile Include="Implementations\CategoryService.cs" />
+    <Compile Include="Implementations\GroupService.cs" />
+    <Compile Include="Implementations\OrderService.cs" />
+    <Compile Include="Implementations\ProductService.cs" />
     <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Interfaces\ICategory.cs" />
     <Compile Include="Interfaces\IGroup.cs" />
     <Compile Include="Interfaces\IModel.cs" />
     <Compile Include="Interfaces\IOrder.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
-    <Compile Include="Interfaces\IPromotion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

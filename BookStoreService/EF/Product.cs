@@ -1,11 +1,10 @@
-namespace BookStoreService.EF
+namespace BookstoreService.EF
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using System.Runtime.Serialization;
     using System.Xml.Linq;
 
     [Table("Product")]
@@ -21,12 +20,6 @@ namespace BookStoreService.EF
         [Column(TypeName = "xml")]
         public string Description { get; set; }
 
-        [NotMapped]
-        public XElement DescriptionXML
-        {
-            get { return XElement.Parse(Description); }
-            set { Description = value.ToString(); }
-        }
 
         [StringLength(250)]
         public string Thumbnail { get; set; }

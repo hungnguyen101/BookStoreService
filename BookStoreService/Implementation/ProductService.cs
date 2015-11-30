@@ -15,7 +15,7 @@ namespace BookStoreService.Implementation
 
         public List<Product> findProuctsByCategory(int id)
         {
-            return db.Products.Where(a => a.Category == id).ToList();
+            return db.Products.Where(a => a.Category == id && a.Status.Value == true).ToList();
         }
 
         public List<Product> findAll()
@@ -32,6 +32,7 @@ namespace BookStoreService.Implementation
         {
             try
             {
+                entity.Status = true;
                 db.Products.Add(entity);
                 db.SaveChanges();
                 return entity.id;
@@ -50,6 +51,7 @@ namespace BookStoreService.Implementation
                 p.Category = entity.Category;
                 p.Description = entity.Description;
                 p.Name = entity.Name;
+                p.Thumbnail = entity.Thumbnail;
                 db.SaveChanges();
                 return true;
             }
@@ -71,6 +73,17 @@ namespace BookStoreService.Implementation
             {
                 return false;
             }
+        }
+
+
+        public List<Product> findProductByKeyword(string keyword)
+        {
+            return db.Products.Where(p => p.Name.Contains(keyword) && p.Status.Value == true).ToList();
+        }
+
+        public List<Product> findProductByPrice(decimal start, decimal end)
+        {
+            return db.Products.Where(p => p.Price >= start && p.Price <= end && p.Status.Value == true).ToList();
         }
     }
 }

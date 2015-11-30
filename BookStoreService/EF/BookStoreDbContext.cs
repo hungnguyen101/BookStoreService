@@ -1,14 +1,14 @@
-namespace BookStoreService.EF
+namespace BookstoreService.EF
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class BookStoreDbContext : DbContext
+    public partial class BookstoreDbContext : DbContext
     {
-        public BookStoreDbContext()
-            : base("name=BookStoreDbContext")
+        public BookstoreDbContext()
+            : base("name=BookstoreDbContext")
         {
         }
 
